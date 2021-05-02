@@ -1,0 +1,767 @@
+
+<html>
+<head>
+<title>CS 608 - Fall 2019 - Cryptography and Security </title>
+</head>
+
+<BODY bgColor=#ffffff>
+<FONT face=Georgia>
+
+<H3>CS 608 - Fall 2019 - Cryptography and Security</H3>
+
+
+
+<B><font color="red">News:</font></B>
+<ul>
+  <!--<li> HW2 will be due on April 23 mid night. 
+   <li> HW1 will be due on March 5 mid night. 
+   -->
+   <li> Course website is up! 
+
+   </ul>
+
+<!--
+<ul>
+
+<li> <a href="#resource">Resource</a> added!
+
+
+<li> Please select your presentation topics!
+
+  <li>Templates for final project report: research paper (<a href="presentations/CS708-project-template-researchpaper-word.doc">word</a>, 
+  <a href="presentations/CS708-project-template-researchpaper-latex.tex">latex</a>),
+   survey paper (<a href="presentations/CS708-project-template-surveypaper-word.doc">word</a>,
+  <a href="presentations/CS708-project-template-surveypaper-latex.tex">latex</a>)
+  <li><font color="red">Final exam: December 19, 2013 @ 6pm in FMH 310 (closed books, closed notes)</font>
+  <li>09/12/13: The <A href="presentations/A.doc">assignment</a> has been posted (together with additional <a href="presentations/instructions.txt">instructions</a>). 
+    It is due in class on <strike>09/26/13</strike> <FONT color="red">10/03/13 (new deadline)</FONT>.
+  <li>09/05/13: Location of lectures has been moved to GITC 4415.
+
+</ul> -->
+
+
+<P><B>Class schedule</B>: Thursday 2:30 - 5:20pm, Sep 5, 2019 - Dec 5, 2019; <B>Room</B>: CKB 217<BR>
+
+
+
+
+
+<P><B>Instructor</B>: <a href="http://web.njit.edu/~qiang">Qiang Tang</a>;  <B>Email</B>: qiang at njit.edu</B>; <B>Office</B>: GITC 4204; <B>Office hours</B>: 5:30-6:00pm Wednesdays, 1:00-2:20pm, 5:20 - 6:00pm Thursdays <BR>
+
+<P><B>TA</B>: Songlin He;  <B>Email</B>: sh553 at njit.edu</B>; <B>Office</B>: TBD; <B>Office hours</B>: by appointment.<BR>
+
+
+
+
+
+<P><B>Class Overview:</B>
+We will cover materials of <I>modern cryptography</I>, and some applications to security. In particular, students will be exposed to how to formally define security property, how to construct a cryptographic scheme whose security can be rigoriously argued, how to use a cryptographic building block to realize a more complex functionality, and some real world applications, including the recently emerged disruptive technology -- <font color="blue"> blockchain and cryptocurrency. </font> 
+
+<P>A tentative list of topics includes: 
+</P>
+<ul>
+  <li>Mathematical background: Probability, number theory, abstract algebra, reduction
+
+<li>Symmetric key primitives: OWF, PRG, PRF, symmetric key encryption, MAC  
+<li>Asymmetric key primitives: Public key encryption, digital signatures
+<li>Cryptographic protocols: Key exchange, Coin-tossing, Oblivious transfer, etc
+<li>Applications: E-voting, Bitcoin, Secure messaging
+ <!--   <li>Advanced topics (optional): Broadcast encryption, traitor tracing, honey encryption, steganography -->
+
+  <!--
+<li>privacy-preserving data mining
+<li>private information retrieval
+<li>secure file systems and secure deletion
+<li>security threats in long-term storage
+<li>digital rights management
+<li>data anonymization techniques
+<li>secure data provenance
+<li>web metering and click fraud -->
+</ul
+</P>
+
+
+
+<P><B>Textbook</B>: No textbook is required, but the followings can be useful reference:
+ <ul>
+    <li><a href="http://www.cs.umd.edu/~jkatz/imc.html">Introduction to Cryptography</a> -- By Jonathan Katz and Yehuda Lindell
+      <li><a href="https://toc.cryptobook.us/"> A Graduate Course in Applied Cryptography </a> -- By Dan Boneh and Victor Shoup 
+   <!-- <li><a href="https://cseweb.ucsd.edu/~mihir/papers/gb.pdf">Lecture Notes on Cryptography</a> -- By Mihir Bellare and Shafi Goldwasser-->
+    <!--<li><a href="http://www.cs.au.dk/~ivan/Sigma.pdf">Sigma protocols</a>-->
+</ul>
+
+
+<!--
+<P><B>Course Description</B><BR>
+
+The course will involve a substantial amount of reading, presenting research papers, participation in
+class discussions, and a semester-long research project.  Each lecture will
+focus on a specific topic and will be based on presentations and class
+discussions.  <BR>
+
+
+<P><I><font color="blue">Presentation:</font></I> Students are encouraged to work as a team to prepare
+presentations (based on research papers) and lead the discussion on the
+respective topic.  The students are required to read the assigned papers for
+each week.  In addition, each presenting team is responsible for submitting a
+report for the papers assigned for that week, which must include: (1)
+most interesting part and weak points (2) two possible extensions with justification.  This report has to be
+turned in <font color="red">by the weekend before the presentation.</font> The rest of the class is required to submit a report after the presentation.
+
+<P><I><font color="blue">Course project:</font></I> Students will work on the course project in teams. There is flexibility on the
+nature of the project: Both theoretical and system contributions will be
+appreciated, although all projects should have a
+clear relation to applied cryptography. The outcome of the project will be in
+the form of a final report, describing the design/implementation efforts. 
+Students will present their results to the class.
+
+<P>Due to the dynamic nature of this field, there is no one textbook
+required for this course.  Each selected topic will be based on handouts and
+research papers from recent top conferences and journals.
+
+<P><B>Who should take this course</B><BR>
+Graduate students (PhD and MS) interested in having a deeper understanding of the ever-growing security and privacy concerns. 
+The course is also an excellent opportunity to conduct research on the applied cryptography/security/privacy and find research topics for Ph.D. and M.S. theses.-->
+
+<P><B>Prerequisites</B>: Math 226 or CS 241
+
+   
+<!--Background recommended but not required:
+Undergraduate-level security or cryptography. We welcome students from non-cryptography areas such as theory, data mining, programming languages and systems to participate and contribute to our discussions.-->
+
+<P><B>Grading policy</B><BR>
+
+<table border=1>
+
+
+<tr>
+  <td><FONT face=Georgia>Homework-1</td> <td><FONT face=Georgia>15%</FONT></td>
+</tr>
+
+<tr>
+  <td><FONT face=Georgia>Homework-2</td> <td><FONT face=Georgia>15%</FONT></td>
+</tr>
+
+<tr>
+  <td><FONT face=Georgia>Homework-3</td> <td><FONT face=Georgia>15%</FONT></td>
+</tr>
+
+<tr>
+  <FONT face=Georgia>
+  <td><FONT face=Georgia>Mid-Term</FONT></td> <td><FONT face=Georgia>20%</FONT></td>
+  </FONT>
+</tr>
+
+<tr>
+  <FONT face=Georgia>
+  <td><FONT face=Georgia>Final</FONT></td> <td><FONT face=Georgia>35%</FONT></td>
+  </FONT>
+</tr>
+
+<tr>
+  <FONT face=Georgia>
+  <td><FONT face=Georgia>Bonus (in HWs and Exams)</FONT></td> <td><FONT face=Georgia>5%-20%</FONT></td>
+  </FONT>
+</tr>
+
+
+</table>
+
+
+
+<P><B>Academic integrity</B>: 
+The <a href="http://www5.njit.edu/doss/policies/honorcode/index.php">NJIT Honor Code</A> will be upheld, and any violations will be brought to the immediate attention of the Dean of Students. <br>
+
+
+
+<BR>
+
+<P><B>Syllabus</B>
+<table border=1 cellpadding=4>
+
+<tr bgcolor="#eedddd">
+  <td><FONT face=Georgia>Date</FONT></td> 
+  <td><FONT face=Georgia>Topic</FONT></td> 
+ <td><FONT face=Georgia>Application/Story</FONT></td> 
+ <!-- <td><FONT face=Georgia>Readings</FONT></td>-->
+</tr>
+<tr>
+  <td><FONT face=Georgia>09/5</FONT></td> 
+  <td><FONT face=Georgia> Overview + Historic Cipher</FONT></td>  
+  <td><FONT face=Georgia> Enigma Machine</FONT></td>
+  <!--<td><FONT face=Georgia size=-1>
+    <li><a href="presentations/lecture-01.pdf">lecture 1</a>-->
+      </FONT>
+  </td>
+</tr>
+
+<tr>
+  <td><FONT face=Georgia>09/12</FONT></td> 
+  <td><FONT face=Georgia> Perfect Secrecy + Secret Sharing</FONT></td>  
+  <td><FONT face=Georgia> File Dispersal  </FONT></td>
+   <!--<td><FONT face=Georgia size=-1>
+   <li><a href="presentations/lecture-01.pdf">lecture 1</a>-->
+      </FONT>
+  </td>
+</tr>
+
+<tr>
+  <td><FONT face=Georgia>09/19</FONT></td> 
+  <td><FONT face=Georgia> Computational Notions + OWF</FONT></td>  
+  <td><FONT face=Georgia> Password Log in</FONT>
+<!--</td>
+  <td><FONT face=Georgia size=-1>
+    Tsang et al. <a href="http://www.cs.dartmouth.edu/~sws/pubs/akts07.pdf">Blacklistable anonymous credential: blocking misbehaving users without ttps</a> <BR>
+
+    Tsang et al. <a href="http://www.cs.dartmouth.edu/~sws/pubs/perea-ccs08.pdf">PEREA: towards practical TTP-free revocation in anonymous authentication</a><BR>
+    
+    Corrigan-Gibbs et al. <a href="http://freehaven.net/anonbib/cache/ccs10-dissent.pdf">Dissent: Accountable Anonymous Group Messaging</a><BR>
+
+    Naylor et al. <a href="https://www.cs.cmu.edu/~dnaylor/APIP.pdf">Balancing Accountability and Privacy in the Network</a>
+      -->
+  </td>
+</tr>
+
+<tr>
+  <td><FONT face=Georgia>09/26</FONT></td> 
+  <td><FONT face=Georgia> Indistinguishability + PRG </FONT></td>  
+  <td><FONT face=Georgia> Dual EC Backdoor </FONT></td>
+  <!--<td><FONT face=Georgia size=-1>
+    <li><a href="presentations/lecture-01.pdf">lecture 1</a>-->
+      </FONT>
+  </td>
+</tr>
+
+<tr>
+  <td><FONT face=Georgia>10/03</FONT></td> 
+  <td><FONT face=Georgia> Pseudorandom Function </FONT></td>  
+  <td><FONT face=Georgia> Key derivation, identification </FONT></td>
+  <!--<td><FONT face=Georgia size=-1>
+    <li><a href="presentations/lecture-01.pdf">lecture 1</a>-->
+      </FONT>
+  </td>
+</tr>
+
+<tr>
+  <td><FONT face=Georgia>10/10</FONT></td> 
+  <td><FONT face=Georgia> Symmetric key encryption </FONT></td>  
+  <td><FONT face=Georgia> OpenPGP  </FONT></td>
+  <!--<td><FONT face=Georgia size=-1>
+    <li><a href="presentations/lecture-01.pdf">lecture 1</a>-->
+      </FONT>
+  </td>
+</tr>
+
+
+<tr>
+  <td><FONT face=Georgia>10/17</FONT></td> 
+  <td><FONT face=Georgia> Modes of Operation + Message authentication </FONT></td>  
+  <td><FONT face=Georgia> WEP, SSH </FONT></td>
+  <!--<td><FONT face=Georgia size=-1>
+    <li><a href="presentations/lecture-01.pdf">lecture 1</a>-->
+      </FONT>
+  </td>
+</tr>
+
+
+<tr>
+  <td><FONT face=Georgia>10/24</FONT></td> 
+  <td><FONT face=Georgia> Mid Term </FONT></td>  
+  <td><FONT face=Georgia> </FONT></td>
+  <!--<td><FONT face=Georgia size=-1>
+    <li><a href="presentations/lecture-01.pdf">lecture 1</a>-->
+      </FONT>
+  </td>
+</tr>
+
+
+
+
+
+<tr>
+  <td><FONT face=Georgia>10/31</FONT></td> 
+  <td><FONT face=Georgia> Key exchange, TDOWF, Public key encryption</FONT></td>  
+  <td><FONT face=Georgia> TLS </FONT></td>
+   <!--<td><FONT face=Georgia size=-1>
+   <li><a href="presentations/lecture-01.pdf">lecture 1</a>-->
+      </FONT>
+  </td>
+</tr>
+
+<tr>
+  <td><FONT face=Georgia>11/7</FONT></td> 
+  <td><FONT face=Georgia> Public key encryption </FONT></td>  
+  <td><FONT face=Georgia> E-voting </FONT></td>
+  <!--<td><FONT face=Georgia size=-1>
+    <li><a href="presentations/lecture-01.pdf">lecture 1</a>-->
+      </FONT>
+  </td>
+</tr>
+
+
+<tr>
+  <td><FONT face=Georgia>11/14</FONT></td> 
+  <td><FONT face=Georgia> Digital signature </FONT></td>  
+  <td><FONT face=Georgia> Ecash</FONT></td>
+  <!--<<td><FONT face=Georgia size=-1>
+    li><a href="presentations/lecture-01.pdf">lecture 1</a>-->
+      </FONT>
+  </td>
+</tr>
+
+<tr>
+  <td><FONT face=Georgia>11/21</FONT></td> 
+  <td><FONT face=Georgia> PKI  </FONT></td>  
+  <td><FONT face=Georgia>  </FONT></td>
+  <!--<td><FONT face=Georgia size=-1>
+    <li><a href="presentations/lecture-01.pdf">lecture 1</a>-->
+      </FONT>
+  </td>
+</tr>
+
+
+<tr>
+  <td><FONT face=Georgia>11/26 </FONT></td> 
+  <td><FONT face=Georgia> Advanced Topic: Bitcoin and Blockchain  </FONT></td>  
+  <td><FONT face=Georgia> </FONT></td>
+   <!--<<td><FONT face=Georgia size=-1>
+   li><a href="presentations/lecture-01.pdf">lecture 1</a>-->
+      </FONT>
+  </td>
+</tr>
+
+
+<tr>
+  <td><FONT face=Georgia>12/5</FONT></td> 
+  <td><FONT face=Georgia> Review </FONT></td>  
+  <td><FONT face=Georgia>  </FONT></td>
+  <!--<td><FONT face=Georgia size=-1>
+    <li><a href="presentations/lecture-01.pdf">lecture 1</a>-->
+      </FONT>
+  </td>
+</tr>
+
+<tr>
+  <td><FONT face=Georgia>TBD</FONT></td> 
+  <td><FONT face=Georgia> Final Exam </FONT></td>  
+  <td><FONT face=Georgia>  </FONT></td>
+  <!--<td><FONT face=Georgia size=-1>
+    <li><a href="presentations/lecture-01.pdf">lecture 1</a>-->
+      </FONT>
+  </td>
+</tr>
+
+<!--
+<tr>
+  <td><FONT face=Georgia>05/02/17</FONT></td> 
+  <td><FONT face=Georgia> Advanced topic + review</FONT></td>  
+  <td><FONT face=Georgia> TBA </FONT></td>
+  <td><FONT face=Georgia size=-1>
+    <li><a href="presentations/lecture-01.pdf">lecture 1</a>
+      </FONT>
+  </td>
+</tr>
+
+<tr>
+  <td><FONT face=Georgia>11/2/17</FONT></td> 
+  <td><FONT face=Georgia, color=red> Thanksgiving Break, no class </FONT></td>  
+  <td><FONT face=Georgia> </FONT></td>
+  <td><FONT face=Georgia size=-1>
+    <li><a href="presentations/lecture-01.pdf">lecture 1</a>
+      </FONT>
+  </td>
+</tr>
+-->
+
+
+<!--
+
+
+
+<tr>
+  <td rowspan="3"><FONT face=Georgia>09/12/13</FONT></td> 
+  <td rowspan="3"><FONT face=Georgia>Database as a Service</FONT></td>  
+  <td><FONT face=Georgia>Reza</FONT></td>
+  <td><FONT face=Georgia size=-1>
+      Hacigumus et al. <a href="papers/DB-ICDE2002.pdf">Providing Database as a Service</a>. IEEE ICDE 2002.
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia>Reza</FONT></td>
+  <td><FONT face=Georgia size=-1>
+    Mykletun et al. <a href="papers/outsourced-DB-NDSS2004.pdf">Authentication and Integrity in Outsourced Databases</a>. ISOC NDSS 2004.
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia></FONT></td>
+  <td><FONT face=Georgia size=-1>
+    <li><a href="presentations/lecture-02.pdf">lecture 2</a>,
+    <a href="presentations/db-service.pdf">presentation 1</a>,
+    <a href="presentations/odb.pdf">presentation 2</a>
+      </FONT>
+  </td>
+</tr>
+
+<tr>
+  <td rowspan="3"><FONT face=Georgia>09/19/13</FONT></td> 
+  <td rowspan="3"><FONT face=Georgia>Remote Data Integrity Checking</FONT></td>   
+  <td><FONT face=Georgia>Reza</FONT></td>
+  <td><FONT face=Georgia size=-1>
+    Ateniese et al. <a href="papers/pdp-ccs2007.pdf"> Provable Data Possession at Untrusted Stores</a>. ACM CCS 2007.   
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia>Bo</FONT></td>
+  <td><FONT face=Georgia size=-1>
+    Bowers et al.<a href="papers/HAIL-ccs2009.pdf"> HAIL: A High-Availability and Integrity Layer for Cloud Storage</a>. ACM CCS 2009.
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia></FONT></td>
+  <td><FONT face=Georgia size=-1>
+    <li><a href="presentations/lecture-03.pdf">lecture 3</a>,
+    <a href="presentations/PDP.pdf">presentation 1</a>
+      </FONT>
+  </td>
+</tr>
+
+<tr>
+  <td rowspan="3"><FONT face=Georgia>09/26/13</FONT></td> 
+  <td rowspan="3"><FONT face=Georgia>Working over Encrypted Data</FONT></td>  
+  <td><FONT face=Georgia>Reza</FONT></td>
+  <td><FONT face=Georgia size=-1>
+    Curtmola et al. <a href="papers/sse-2006.pdf">Searchable Symmetric Encryption: Improved Definitions and Efficient Constructions</a>. ACM CCS 2006.
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia>Arwa + Kirtan</FONT></td>
+  <td><FONT face=Georgia size=-1>
+    Popa et al. <a href="papers/cryptdb-sosp11.pdf">CryptDB: Protecting Confidentiality with Encrypted Query Processing</a>. ACM SOSP 2011.
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia></FONT></td>
+  <td><FONT face=Georgia size=-1>
+    <li><a href="presentations/lecture-04.pdf">lecture 4</a>,
+    <a href="presentations/sse.pdf">presentation 1</a>,
+    <a href="presentations/cryptdb.pdf">presentation 2</a>
+      </FONT>
+  </td>
+</tr>
+
+<tr>
+  <td rowspan="3"><FONT face=Georgia>10/03/13</FONT></td> 
+  <td rowspan="3"><FONT face=Georgia>Security of Outsourced Databases +<BR>Anonymity and Privacy</FONT></td>  
+  <td><FONT face=Georgia>Wadood</FONT></td>
+  <td><FONT face=Georgia size=-1>
+    Bajaj and Sion. <a href="papers/correctdb-vldb13.pdf">CorrectDB: SQL Engine with Practical Query Authentication</a>. VLDB 2013.
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia>Nafi</FONT></td>
+  <td><FONT face=Georgia size=-1>
+    Hsiao et al. <a href="papers/lap-sp12.pdf">LAP: Lightweight Anonymity and Privacy</a>. IEEE S&P 2012.
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia></FONT></td>
+  <td><FONT face=Georgia size=-1>
+    <li><a href="presentations/lecture-05.pdf">lecture 5</a>,
+    <a href="presentations/correctdb.pdf">presentation 1</a>,
+    <a href="presentations/LAP.pdf">presentation 2</a>
+      </FONT>
+  </td>
+</tr>
+
+<tr>
+  <td rowspan="3"><FONT face=Georgia>10/10/13</FONT></td> 
+  <td rowspan="3"><FONT face=Georgia>Privacy in Mobile and Vehicular Systems</FONT></td>  
+  <td><FONT face=Georgia>Jigang</FONT></td>
+  <td><FONT face=Georgia size=-1>
+    Popa et al. <a href="papers/vpriv-sec09.pdf">VPriv: Protecting Privacy in Location-Based Vehicular Services</a>. USENIX Security 2009.
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia>Susan</FONT></td>
+  <td><FONT face=Georgia size=-1>
+    Popa et al.<a href="papers/privstats-ccs11.pdf">Privacy and Accountability for Location-Based Aggregate Statistics</a>. ACM CCS 2011.
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia></FONT></td>
+  <td><FONT face=Georgia size=-1>
+    <li><a href="presentations/lecture-06.pdf">lecture 6</a>,
+    <a href="presentations/vpriv.pdf">presentation 1</a>,
+    <a href="presentations/privstats.pdf">presentation 2</a>
+      </FONT>
+  </td>
+</tr>
+
+<tr>
+  <td rowspan="3"><FONT face=Georgia>10/17/13</FONT></td> 
+  <td rowspan="3"><FONT face=Georgia>(De)Anonymization</FONT></td>  
+  <td><FONT face=Georgia>Nafize</FONT></td>
+  <td><FONT face=Georgia size=-1>
+    Srivatsa and Hicks. <a href="papers/mobtraces-ccs12.pdf">Deanonymizing Mobility Traces: Using Social Networks as a Side-Channel</a>. ACM CCS 2012.
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia>Tarik</FONT></td>
+  <td><FONT face=Georgia size=-1>
+    Narayanan et al. <a href="papers/author-sp12.pdf">On the Feasibility of Internet-Scale Author Identification</a>. IEEE S&P 2012.
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia></FONT></td>
+  <td><FONT face=Georgia size=-1>
+    <li><a href="presentations/lecture-07.pdf">lecture 7</a>,
+    <a href="presentations/mobtraces.pdf">presentation 1</a>,
+    <a href="presentations/author.pdf">presentation 2</a>
+      </FONT>
+  </td>
+</tr>
+
+<tr>
+  <td rowspan="3"><FONT face=Georgia>10/24/13</FONT></td> 
+  <td rowspan="3"><FONT face=Georgia>Attacks against Cloud Storage</FONT></td>  
+  <td><FONT face=Georgia>Wadood</FONT></td>
+  <td><FONT face=Georgia size=-1>
+    Mulazzani et al. <a href="papers/darkclouds-sec11.pdf">Dark Clouds on the Horizon: Using Cloud Storage as Attack Vector and Online Slack Space</a>. USENIX Security 2011.
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia>Anil</FONT></td>
+  <td><FONT face=Georgia size=-1>
+    Halevi et al. <a href="papers/ownership-ccs11.pdf">Proofs of Ownership in Remote Storage Systems</a>. ACM CCS 2011.
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia></FONT></td>
+  <td><FONT face=Georgia size=-1>
+    <li><a href="presentations/lecture-08.pdf">lecture 8</a>,
+    <a href="presentations/darkclouds.pdf">presentation 1</a>,
+    <a href="presentations/pow.pdf">presentation 2</a>
+      </FONT>
+  </td>
+</tr>
+
+
+<tr>
+  <td rowspan="3"><FONT face=Georgia>10/31/13</FONT></td> 
+  <td rowspan="3"><FONT face=Georgia>Security of Search Engines</FONT></td>   
+  <td><FONT face=Georgia>Vishal + Arwa</FONT></td>
+  <td><FONT face=Georgia size=-1>
+    John et al. <a href="papers/deseo-sec11.pdf">deSEO: Combating Search-Result Poisoning</a>. USENIX Security 2011.
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia>Jigang</FONT></td>
+  <td><FONT face=Georgia size=-1>
+    Lu et al. <a href="papers/surf-ccs11.pdf">SURF: detecting and measuring search poisoning</a>. ACM CCS 2011.
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia></FONT></td>
+  <td><FONT face=Georgia size=-1>
+    <li><a href="presentations/lecture-09.pdf">lecture 9</a>,
+    <a href="presentations/deSEO.pdf">presentation 1</a>,
+    <a href="presentations/surf.pdf">presentation 2</a>
+      </FONT>
+  </td>
+</tr>
+
+
+<tr>
+  <td rowspan="4"><FONT face=Georgia>11/07/13</FONT></td> 
+  <td rowspan="4"><FONT face=Georgia>Oblivious RAM +<br><FONT color=blue>Intermediate Project Presentations</FONT></FONT></td>  
+  <td><FONT face=Georgia></FONT></td>
+  <td><FONT face=Georgia size=-1>
+    <li>Intermediate project presentations: <a href="presentations/team1.pdf">team 1</a>, 
+    <a href="presentations/team2.pdf">team 2</a>, 
+    <a href="presentations/team3.pdf">team 3</a>, 
+    <a href="presentations/team4.pdf">team 4</a>
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia>Reza</FONT></td>
+  <td><FONT face=Georgia size=-1>
+    Goldreich and Ostrovsky. <a href="papers/ORAM-paper.pdf">Software Protection and Simulation on Oblivious RAMs</a>. JACM 1996.
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia>Anil + Nafize</FONT></td>
+  <td><FONT face=Georgia size=-1>
+    Stefanov and Shi. <a href="papers/oblivistore-sp13.pdf">ObliviStore: High Performance Oblivious Cloud Storage</a>. IEEE S&P 2013.
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia></FONT></td>
+  <td><FONT face=Georgia size=-1>
+    <li><a href="presentations/ORAM.pdf">presentation 1</a>,
+    <a href="presentations/oblivistore.pdf">presentation 2</a>
+      </FONT>
+  </td>
+</tr>
+
+<tr>
+  <td rowspan="3"><FONT face=Georgia>11/14/13</FONT></td> 
+  <td rowspan="3"><FONT face=Georgia>Secure Deletion</FONT></td>  
+  <td><FONT face=Georgia>Vishal + Tarik</FONT></td>
+  <td><FONT face=Georgia size=-1>
+    Wolchok et al. <a href="papers/unvanish-ndss10.pdf">Defeating Vanish with Low-Cost Sybil Attacks Against Large DHTs</a>. ISOC NDSS 2010.
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia>Kirtan</FONT></td>
+  <td><FONT face=Georgia size=-1>
+    Skillen and Mannan. <a href="papers/deniable-ndss13.pdf">On Implementing Deniable Storage Encryption for Mobile Devices</a>. ISOC NDSS 2013.
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia></FONT></td>
+  <td><FONT face=Georgia size=-1>
+    <li><a href="presentations/lecture-11.pdf">lecture 11</a>,
+    <a href="presentations/unvanish.pdf">presentation 1</a>,
+    <a href="presentations/mobiflage.pdf">presentation 2</a>
+      </FONT>
+  </td>
+</tr>
+
+<tr>
+  <td rowspan="4"><FONT face=Georgia>11/21/13</FONT></td> 
+  <td rowspan="4"><FONT face=Georgia>Digital Rights Management</FONT></td>  
+  <td><FONT face=Georgia>Stephen</FONT></td>
+  <td><FONT face=Georgia size=-1>
+    Halderman and Felten. <a href="papers/sonydrm-sec06.pdf">Lessons from the Sony CD DRM Episode</a>. USENIX Security 2006.
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia></FONT></td>
+  <td><FONT face=Georgia size=-1>
+        <li><a href="http://forum.doom9.org/showthread.php?t=122363">AACS - DVD Protection</a>, 
+      <a href="http://www.aacsla.com/specifications/">AACS specifications</a>.
+    </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia>Reza</FONT></td>
+  <td><FONT face=Georgia size=-1>
+    related readings: Naor, Naor, and Lotspiech. <a href="papers/nnl.pdf">Revocation and Tracing Schemes for Stateless Receivers</a>. IACR CRYPTO 2001.
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia></FONT></td>
+  <td><FONT face=Georgia size=-1>
+    <li><a href="presentations/lecture-12.pdf">lecture 12</a>,
+    <a href="presentations/sonydrm.pdf">presentation 1</a>,
+    <a href="presentations/aacs-dvd.pdf">presentation 2</a>
+      </FONT>
+  </td>
+</tr>
+
+<tr>
+  <td rowspan="3"><FONT face=Georgia>11/26/13</FONT></td> 
+  <td rowspan="3"><FONT face=Georgia>Security of Online Advertising</FONT></td>   
+  <td><FONT face=Georgia>Nafi</FONT></td>
+  <td><FONT face=Georgia size=-1>
+    Toubiana et al. <a href="papers/adnostic-ndss10.pdf">Adnostic: Privacy Preserving Targeted Advertising</a>. ISOC NDSS 2010.
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia>Stephen</FONT></td>
+  <td><FONT face=Georgia size=-1>
+    Hardt and Nath. <a href="papers/privperso-ccs12.pdf">Privacy-Aware Personalization for Mobile Advertising</a>. ACM CCS 2012.
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia></FONT></td>
+  <td><FONT face=Georgia size=-1>
+    <li><a href="presentations/lecture-13.pdf">lecture 13</a>,
+    <a href="presentations/adnostic.pptx">presentation 1</a>,
+    <a href="presentations/ppads_mobile.pptx">presentation 2</a>
+      </FONT>
+  </td>
+</tr>
+
+<tr>
+  <td><FONT face=Georgia>12/05/13</FONT></td> 
+  <td><FONT face=Georgia color=blue>Final Project Presentations</FONT></td>   
+  <td><FONT face=Georgia></FONT></td>
+  <td><FONT face=Georgia size=-1>
+    <li>Final project presentations: <a href="presentations/team1_f.pdf">team 1</a>, 
+    <a href="presentations/team2_f.pdf">team 2</a>, 
+    <a href="presentations/team3_f.pdf">team 3</a>, 
+    <a href="presentations/team4_f.pdf">team 4</a>
+      </FONT>
+  </td>
+</tr>
+-->
+
+<!--
+<tr>
+  <td rowspan="2"><FONT face=Georgia>/13</FONT></td> 
+  <td rowspan="2"><FONT face=Georgia></FONT></td>   
+  <td><FONT face=Georgia></FONT></td>
+  <td><FONT face=Georgia size=-1>
+      </FONT>
+  </td>
+</tr>
+<tr>
+  <td><FONT face=Georgia></FONT></td>
+  <td><FONT face=Georgia size=-1>
+      </FONT>
+  </td>
+</tr>
+-->
+
+
+</table>
+<BR>
+
+
+
+
+<P><B><a id="resource">Resource</a></B>
+  <ul>
+    <li><a href="https://www.youtube.com/playlist?list=PL9oqNDMzcMClAPkwrn5dm7IndYjjWiSYJ"> Standford online cryptography course</a> -- by Prof. Dan Boneh
+    <!--<li><a href="http://www.cs.umd.edu/~jkatz/imc.html">Introduction to Cryptography</a>-->
+    <li><a href="http://www.cs.au.dk/~ivan/Sigma.pdf">Sigma protocols</a>
+</ul>
+
+
+
+<!--
+<B>Modifications to syllabus</B>
+<ul>The syllabus may be modified at the discretion of the instructor or in the event of extenuating circumstances.<BR>
+Students will be notified in class of any changes to the syllabus. 
+</ul>
+-->
+
+</FONT>
+</body>
+
